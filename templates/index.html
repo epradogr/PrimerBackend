@@ -21,26 +21,28 @@
   </style>
   </head>
 
-
+ 
 <!-- Barra de navegación -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{{ url_for('static', filename='templates\index.html')}}"> <img src="{{ url_for('static', filename='static\images\nube.png')}}" alt="Bootstrap" width="30" height="30">  Portafolio</a>
+      <a class="navbar-brand" href="{{url_for('home')}}"> 
+        <img src="{{url_for('static', filename='images/nube.png')}}" alt="ddd" width="30" height="30"/>  Portafolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-          <a class="nav-link" href="Tarea.html" target="_blank" >Mi primera página </a>
-          <a class="nav-link" href="desarrollo.html" target="_blank">Desarrollo web</a>
-          <a class="nav-link" href="sobremi.html" target="_blank">Sobre mí</a>
-          <a class="nav-link" href="git.html" target="_blank">GitHub</a>
+          <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Inicio</a>
+          <a class="nav-link" href="{{url_for('Tarea')}}" target="_blank" >Mi primera página </a>
+          <a class="nav-link" href="{{url_for('desarrollo')}}" target="_blank">Desarrollo web</a>
+          <a class="nav-link" href="{{url_for('sobremi')}}" target="_blank">Sobre mí</a>
+          <a class="nav-link" href="{{url_for('git')}}" target="_blank">GitHub</a>
           <a class="nav-link" href="https://www.canva.com/design/DAGPG3aSYig/kNvbHHiyqCcngBPbperMhQ/view?utm_content=DAGPG3aSYig&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">Stack</a>
-          <a class="nav-link" href="arVrEr.html" target="_blank">AR VR y ER</a>
-          <a class="nav-link" href="impresion3D.html" target="_blank">Impresión 3D</a>
-          <a class="nav-link" href="apps.html" target="_blank">Construcción Apps</a>
-          <a class="nav-link" href="ahorcado.html" target="_blank">Ahorcado</a>
+          <a class="nav-link" href="{{url_for('arVrEr')}}" target="_blank">AR VR y ER</a>
+          <a class="nav-link" href="{{url_for('impresion3D')}}" target="_blank">Impresión 3D</a>
+          <a class="nav-link" href="{{url_for('apps')}}" target="_blank">Construcción Apps</a>
+          <a class="nav-link" href="{{url_for('ahorcado')}}" target="_blank">Ahorcado</a>
+          <a class="nav-link" href="{{url_for('servidores')}}" target="_blank">Servidores</a>
       
         </div>
       </div>
@@ -54,7 +56,7 @@
           <!-- Proyecto 1 -->
           <div class="col-md-4">
               <div class="project-section">
-                 <a href="Tarea.html" target="_blank"><img src="assets\images\Huyen-Ảnh-bìa-blog-2023-10-30T114925.545-1024x576.png" alt="Flop App" class="project-image" width="450" height="250"> </a> 
+                 <a href="{{url_for('Tarea')}}" target="_blank"><img src="{{url_for('static', filename='images/Huyen-Ảnh-bìa-blog-2023-10-30T114925.545-1024x576.png')}}" alt="Flop App" class="project-image" width="450" height="250"> </a> 
                   
                   <h3>
                     Mi primera página</h3>
@@ -64,7 +66,7 @@
 
           <div class="col-md-4">
             <div class="project-section">
-                <a href="desarrollo.html" target="_blank"><img src="assets\images\bootstrap-icons.png" alt="Flop App" class="project-image" width="450" height="250"></a>
+                <a href="{{url_for('desarrollo')}}" target="_blank"><img src="{{url_for('static', filename='images/bootstrap-icons.png')}}" alt="Flop App" class="project-image" width="450" height="250"></a>
                 
                 <h3>
                   Desarrollo web</h3>
@@ -74,7 +76,7 @@
 
         <div class="col-md-4">
           <div class="project-section">
-             <a href="sobremi.html" target="_blank"> <img src="assets\images\FullSizeRender.jpg"alt="Flop App" class="project-image" width="400" height="250"> </a>
+             <a href="{{url_for('sobremi')}}" target="_blank"> <img src="{{url_for('static', filename='images/FullSizeRender.jpg')}}"alt="Flop App" class="project-image" width="400" height="250"> </a>
               
               <h3>
                 Sobre mí</h3>
@@ -85,7 +87,7 @@
 
       <div class="col-md-6">
         <div class="project-section">
-           <a href="https://www.canva.com/design/DAGPG3aSYig/kNvbHHiyqCcngBPbperMhQ/view?utm_content=DAGPG3aSYig&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank"> <img src="assets\images\Captura de pantalla 2024-09-23 140040.png" alt="Flop App" class="project-image" width="700" height="400"></a>
+           <a href="https://www.canva.com/design/DAGPG3aSYig/kNvbHHiyqCcngBPbperMhQ/view?utm_content=DAGPG3aSYig&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank"> <img src="{{url_for('static', filename='images/Captura de pantalla 2024-09-23 140040.png')}}" alt="Flop App" class="project-image" width="700" height="400"></a>
             
             <h3>
               Stack overflow</h3>
@@ -95,7 +97,7 @@
 
     <div class="col-md-6">
       <div class="project-section">
-          <a href="git.html" target="_blank"><img src="assets\images\Diferencias-entre-Git-y-Github.png" alt="Flop App" class="project-image" width="700" height="400"></a>
+          <a href="{{url_for('git')}}" target="_blank"><img src="{{url_for('static', filename='images/Diferencias-entre-Git-y-Github.png')}}" alt="Flop App" class="project-image" width="700" height="400"></a>
           
           <h3>
             GitHub</h3>
@@ -106,7 +108,7 @@
 
   <div class="col-md-4">
     <div class="project-section">
-        <a href="arVrEr.html" target="_blank"><img src="assets\images\NRP-Facebook_Connect_Introducing_Oculus_Quest_2_the_Next_Generation_of_All-in-One_VR_Gaming_inline-oculus_quest_2_with_controllers.webp" alt="Flop App" class="project-image" width="450" height="250"></a>
+        <a href="{{url_for('arVrEr')}}" target="_blank"><img src="{{url_for('static', filename='images/NRP-Facebook_Connect_Introducing_Oculus_Quest_2_the_Next_Generation_of_All-in-One_VR_Gaming_inline-oculus_quest_2_with_controllers.webp')}}" alt="Flop App" class="project-image" width="450" height="250"></a>
         
         <h3>
           AR VR y ER</h3>
@@ -116,7 +118,7 @@
 
 <div class="col-md-4">
   <div class="project-section">
-      <a href="impresion3D.html" target="_blank"><img src="assets\images\comprar-impresora-3d.jpg" alt="Flop App" class="project-image" width="450" height="250"></a>
+      <a href="{{url_for('impresion3D')}}" target="_blank"><img src="{{url_for('static', filename='images/comprar-impresora-3d.jpg')}}" alt="Flop App" class="project-image" width="450" height="250"></a>
       
       <h3>
         Escaneo e impresión 3D</h3>
@@ -126,7 +128,7 @@
 
 <div class="col-md-4">
   <div class="project-section">
-      <a href="apps.html" target="_blank"><img src="assets\images\desarrollo_apps_entornos_empresariales.jpg" alt="Flop App" class="project-image" width="450" height="250"></a>
+      <a href="{{url_for('apps')}}" target="_blank"><img src="{{url_for('static', filename='images/desarrollo_apps_entornos_empresariales.jpg')}}" alt="Flop App" class="project-image" width="450" height="250"></a>
       
       <h3>
         Construcción de apps</h3>
@@ -136,7 +138,7 @@
 
 <div class="col-md-6">
   <div class="project-section">
-      <a href="ahorcado.html" target="_blank"><img src="assets\images\hm.jpg" alt="Flop App" class="project-image" width="700" height="400"></a>
+      <a href="{{url_for('ahorcado')}}" target="_blank"><img src="{{url_for('static', filename='images/hm.jpg')}}" alt="Flop App" class="project-image" width="700" height="400"></a>
       
       <h3>
         Programando ahorcado</h3>
@@ -146,11 +148,11 @@
 
 <div class="col-md-6">
   <div class="project-section">
-     <a href="LINK" target="_blank"> <img src="assets\images\servidor-rack-2.jpeg" alt="Flop App" class="project-image" width="700" height="400"></a>
+     <a href="{{url_for('servidores')}}" target="_blank"> <img src="{{url_for('static', filename='images/servidor-rack-2.jpeg')}}" alt="Flop App" class="project-image" width="700" height="400"></a>
       
       <h3>
         Servidores</h3>
-      <p>Un servidor es un ordenador o sistema que distribuye recursos, datos, programas o servicios a otras computadoras.</p>
+      <p>Un servidor es un ordenador o sistema que distribuye recursos, datos, programas o servicios a otras computadoras. Descubre como subir tu propio servidor a tu entorno virtual.</p>
   </div>
 </div>
 
@@ -184,7 +186,7 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2024 Copyright:
-      <a class="text-white" href="index.html">Eduardo Prado</a>
+      <a class="text-white" href="{{url_for('home')}}">Eduardo Prado</a>
     </div>
   </footer>
 
